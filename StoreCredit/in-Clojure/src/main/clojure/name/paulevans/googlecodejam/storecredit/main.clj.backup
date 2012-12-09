@@ -1,0 +1,30 @@
+(ns name.paulevans.googlecodejam.storecredit.main
+  (:use [name.paulevans.googlecodejam.storecredit.core :only (process-testcases)]
+        [name.paulevans.googlecodejam.storecredit.transform.from_file :only (read-testcases-from-file)]))
+        ; [clojure.string :only (replace)]))
+
+(def
+  ^{:doc "The full path to the small test cases file."}
+  testcases-small-file "/Users/evansp2/Documents/software-projects/GoogleCodeChallenges/data/testcases/testcases.small.txt")
+
+(def
+  ^{:doc "The full path to the large test cases file."}
+  testcases-large-file "/Users/evansp2/Documents/software-projects/GoogleCodeChallenges/data/testcases/testcases.large.txt")
+
+(defn print-processed-test-case [testCase]
+  "Prints the processed test case to standard out."
+  (println (str "Case #" (str (:test-case-num testCase)) ": " 
+       (replace (replace (str (:indexes-of-items-to-buy testCase)) 
+                         "[" "") "]" ""))) nil)
+
+(def
+  ^{:doc "The processed [small] test cases."}
+  processed-small (process-testcases (read-testcases-from-file testcases-small-file)))
+
+(def
+  ^{:doc "The processed [large] test cases."}
+  processed-large (process-testcases (read-testcases-from-file testcases-large-file)))
+
+(defn run []
+  "Prints each processed test case to standard out."
+  (map print-processed-test-case processed-small))
