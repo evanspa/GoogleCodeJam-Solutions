@@ -1,6 +1,5 @@
-(defproject googleCodeChallenges "0.0.1-SNAPSHOT"
-  :description "A project for implementing various Google Code Jam challenges using Clojure (a fun vehicle for learning Clojure and Lisp programming in general)."
-  :dependencies [[org.clojure/clojure "1.2.1"]]
-  :dev-dependencies [[swank-clojure "1.2.1"]]
+(defproject GoogleCodeJam-StoreCredit "0.0.1-SNAPSHOT"
+  :description "Solution to the Google Code Jam 'Store Credit' challenge."
+  :dependencies [[org.clojure/clojure "1.4.0"]]
   :source-path "src/main/clojure"
   :repl-init name.paulevans.googlecodejam.storecredit.main)

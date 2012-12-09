@@ -27,8 +27,7 @@
     (assoc testCase 
            :test-case-num testCaseNum
            :store-credit (Integer/parseInt (first rawTestCase))
-           :items (vec (map #(Integer/parseInt %) (split
-                                                    (nth rawTestCase
-                                                         start-index-of-items) 
-                                                    #" "))))))
+           :items (vec (map #(Integer/parseInt %)
+                            (split (nth rawTestCase start-index-of-items) 
+                                   #" "))))))
 
