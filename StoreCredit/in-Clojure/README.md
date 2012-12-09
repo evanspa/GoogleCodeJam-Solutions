@@ -1,5 +1,3 @@
-My Google Code Jam Challenge solutions in Lisp.  Here is the list of Google Code Jam challenges solved within this project:
-
 # Google Code Jam 'Store Credit' challenge
 
 + Project URL: http://code.google.com/codejam/contest/dashboard?c=351101#s=p0
